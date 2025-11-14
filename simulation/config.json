@@ -1,0 +1,6 @@
+{
+  "detector_resolution": 256,
+  "detector_length": 500,
+  "roll_axis_resolution": 2048,
+  "samples_per_unit_length": 1
+}

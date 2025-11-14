@@ -1,0 +1,42 @@
+{
+    "array": {
+        "mode": "compact",
+        "offset_x": 40,
+        "offset_z": 905.0,
+        "length": 540,
+        "height": 85,
+        "bottom_thickness": 10,
+        "left_side": {
+            "enabled": false,
+            "length": 110.0,
+            "height": 402.0
+        },
+        "right_side": {
+            "enabled": true,
+            "length": 110,
+            "height": 402.0
+        },
+        "initial_card_offset": 19.0
+    },
+    "tube": {
+        "model": "liotimes_lxb_140_84b1_d",
+        "offset_x": 36.0,
+        "offset_z": 35.0,
+        "shift_z": 0.0
+    },
+    "card": {
+        "model": "dt_x-card1.5-64de-c1"
+    },
+    "tunnel": {
+        "offset_x": 75,
+        "offset_z": 500.0,
+        "size_x": 500,
+        "size_z": 400
+    },
+    "case": {
+        "offset_x": -25,
+        "offset_z": 0,
+        "size_x": 725,
+        "size_z": 1000.0
+    }
+}

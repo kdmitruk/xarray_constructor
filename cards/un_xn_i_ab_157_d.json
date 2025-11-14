@@ -1,0 +1,24 @@
+{
+    "plate_size_x": 100,
+    "plate_size_y": 104.15,
+
+    "photodiode_offset_x": -0.85,
+    "photodiode_offset_y": 12,
+    "photodiode_offset_z": 13,
+
+    "photodiode_size_x": 102.45,
+    "photodiode_size_y": 3,
+
+    "bottom_margin": 1,
+
+    "platforms": [
+        {
+            "y": 47,
+            "z": 0
+        },
+        {
+            "y": 110,
+            "z": 0
+        }
+    ]
+}

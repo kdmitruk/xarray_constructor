@@ -1,0 +1,42 @@
+{
+    "array": {
+        "mode": "arc",
+        "offset_x": 30.0,
+        "offset_z": 800.0,
+        "length": 540.0,
+        "height": 95.0,
+        "bottom_thickness": 10,
+        "left_side": {
+            "enabled": false,
+            "length": 0.0,
+            "height": 0.0
+        },
+        "right_side": {
+            "enabled": false,
+            "length": 110.0,
+            "height": 410.0
+        },
+        "initial_card_offset": 25.0
+    },
+    "tube": {
+        "model": "spellman_xrb80n100_fan",
+        "offset_x": 220.0,
+        "offset_z": 35.0,
+        "shift_z": 0.0
+    },
+    "card": {
+        "model": "dt_short"
+    },
+    "tunnel": {
+        "offset_x": 100.0,
+        "offset_z": 668.0,
+        "size_x": 400.0,
+        "size_z": 120.0
+    },
+    "case": {
+        "offset_x": 0.0,
+        "offset_z": 0.0,
+        "size_x": 600.0,
+        "size_z": 1000.0
+    }
+}

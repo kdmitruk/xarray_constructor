@@ -1,0 +1,42 @@
+{
+    "array": {
+        "mode": "compact",
+        "offset_x": 0.0,
+        "offset_z": 650.0,
+        "length": 400.0,
+        "height": 80.0,
+        "bottom_thickness": 10,
+        "left_side": {
+            "enabled": false,
+            "length": 0.0,
+            "height": 0.0
+        },
+        "right_side": {
+            "enabled": false,
+            "length": 110.0,
+            "height": 410.0
+        },
+        "initial_card_offset": 47.0
+    },
+    "tube": {
+        "model": "spellman_xrb11_80pn50",
+        "offset_x": 32.0,
+        "offset_z": -1000000.0,
+        "shift_z": 0.0
+    },
+    "card": {
+        "model": "dt_D010812812B"
+    },
+    "tunnel": {
+        "offset_x": 30.0,
+        "offset_z": 437.0,
+        "size_x": 340.0,
+        "size_z": 187.0
+    },
+    "case": {
+        "offset_x": 0.0,
+        "offset_z": 1.0,
+        "size_x": 400.0,
+        "size_z": 826.0
+    }
+}
