@@ -24,6 +24,10 @@ A realtime scanner visualization is displayed, allowing you to verify the layout
 Detector card and X-ray tube details can only be modified by editing their respective files, as they are not meant to change frequently.  
 All device description files use the JSON format.
 
+### Benchmark
+The `--benchmark` option allows for the measurement of model calculation time and plotting time.
+A `benchmark.json` scanner configuration is available that is large enough to be used for benchmarking.
+
 ### Tube file
 ![tube scheme](assets/tube.svg)
 

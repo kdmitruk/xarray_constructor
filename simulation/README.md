@@ -31,7 +31,6 @@ The configuration file defines four parameters used to set the spatial dimension
 | `detector_resolution`       | Number of pixels per single detector                                                                                                                                                                   |
 | `detector_length`       | The virtual length of the detector if it were a flat plate detector. This corresponds to the total scan length                                                                                         |
 | `roll_axis_resolution` | Number of samples along the roll axis. This value determines the effective scanning speed - higher values provide more precise sampling                                                                |
-| `samples_per_unit_length` | Number of samples taken between each point on the detector and the focal spot. A value of 1 is a minimum for smooth results, though lower values can be used for faster calculations |
 
 ## Output:
 During the simulation, the scene is displayed to the user.

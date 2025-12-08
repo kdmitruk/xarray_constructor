@@ -116,7 +116,6 @@ class Card:
         last_d = 1
         d = 0
         col = 0.1
-
         while abs(d - last_d) > eps:
             far = Point2D.avg(min_far, max_far)
             near = params.calc_near(far)

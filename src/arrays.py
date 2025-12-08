@@ -107,7 +107,6 @@ class Array:
 
     def calculate_arch(self, focal_spot):
         self.cards = []
-        eps = 0.00000001
 
         left_corner = Point2D(
             self.offset_x - (self.bottom_thickness if self.left_side_enabled else 0) - Card.bottom_margin,
@@ -151,7 +150,7 @@ class Array:
     def calculate(self, focal_spot):
         self.cards = []
 
-        eps = 0.00000001
+        eps = 1e-2
 
         left_corner = Point2D(
             self.offset_x - (self.bottom_thickness if self.left_side_enabled else 0) - Card.bottom_margin,

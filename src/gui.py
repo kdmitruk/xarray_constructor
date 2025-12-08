@@ -1,21 +1,32 @@
 import sys
 import subprocess
+import time
+from contextlib import contextmanager
 
-from PySide6 import  QtCore
-from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                                QLabel, QLineEdit, QCheckBox, QPushButton, QDoubleSpinBox,
-                               QComboBox, QFileDialog, QGroupBox, QGridLayout, QScrollArea, QFrame,
-                               QProgressDialog, QListWidget, QMenu, QToolButton, QMessageBox)
-from PySide6.QtCore import Qt, QSettings, QDir, QThread, Signal, QFileInfo
+                               QComboBox, QGroupBox, QGridLayout, QScrollArea, QFrame,
+                               QMenu,  QMessageBox)
+from PySide6.QtCore import Qt, QSettings, QDir, QFileInfo
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas, NavigationToolbar2QT as NavigationToolbar
 
 from .card import Card
 from .tube import Tube
 
+@contextmanager
+def benchmark(enabled: bool, label: str):
+    if not enabled:
+        yield
+        return
+
+    t0 = time.perf_counter()
+    yield
+    dt = (time.perf_counter() - t0) * 1000
+    print(f"{label}: {dt:.2f} ms")
+
 class Gui(QMainWindow):
-    def __init__(self, scanner):
+    def __init__(self, scanner, benchmark = False):
         super().__init__()
         self.case_changed = True
         self.view_generated_box = None
@@ -25,6 +36,7 @@ class Gui(QMainWindow):
         self.path_edit = None
         self.auto_update_box = None
         self.scanner = scanner
+        self.benchmark = benchmark
         self.setWindowTitle("XArray Constructor")
         self.setWindowState(Qt.WindowMaximized)
         self.setMinimumSize(800, 600)
@@ -74,8 +86,10 @@ class Gui(QMainWindow):
             self.current_ylim = self.ax.set_ylim()
 
         self.ax.clear()
-        self.scanner.calculate_array()
-        self.plot()
+        with benchmark(self.benchmark, "calculation"):
+            self.scanner.calculate_array()
+        with benchmark(self.benchmark, "plot"):
+            self.plot()
 
     def save(self):
         self.scanner.save_configuration(self.scanner_name.text())
@@ -185,7 +199,7 @@ class Gui(QMainWindow):
 
     def __create_spinbox(self,):
         spinbox = QDoubleSpinBox()
-        spinbox.setRange(-1000000, 10000)
+        spinbox.setRange(-1000000, 100000)
         spinbox.setFixedWidth(84)
         return spinbox
 
