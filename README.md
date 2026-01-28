@@ -129,6 +129,13 @@ The application allows exporting the results of its calculations as a JSON file,
 which includes the locations of the platforms supporting the detector card, as well as the positions of the photodiodes.
 It is also possible to generate a scene file for the simulation, which is described [here](simulation/README.md).
 
+## Citation
+
+If this software has been helpful in your research or contributed to results presented in a scientific publication, please consider citing the following article:
+
+Dmitruk, K. (2025). *Automation of Detector Array Design for Baggage X-Ray Scanners*. **Sensors**, 25(24), 7550.  
+https://doi.org/10.3390/s25247550
+
 ## License
 This project is licensed under the GPLv3 License.  
 See the [LICENSE](LICENSE) file for details.
